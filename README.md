@@ -16,4 +16,5 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 ## Branch details
 
-react-class-comp : class component with state
+react-class-comp : class component with state, contact page
+react-func-comp-state-hook : functional component with useState hook, about page
