@@ -1,6 +1,11 @@
 import App from 'next/app'
 import Header from '../component/Header'
 
+//import bootstrap to enable it across the site
+//raw bootstrap works out of the box on each component
+//for using react-bootstrap import the component on the page
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 /**
  * Nextjs component that can be used to wrap up all pages.
  * makes ot easy for global styling and also for getting global state.
@@ -24,7 +29,7 @@ class MovieApp extends App {
 
         return(
             <div>
-                <Header/>
+                {/* <Header/> */}
                 {/* Each component gets their respective props which are returned from the  
                 getInitialProps function defined in that component */}
                 <Component {...pageProps}/>
