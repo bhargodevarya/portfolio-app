@@ -1,7 +1,15 @@
 import React, { Component } from 'react'
 import Button from 'react-bootstrap/Button'
+import getMovies from '../data/data'
 
 class Contact extends Component {
+
+    static async getInitialProps() {
+        console.log("Hello")
+        const movies = await getMovies()
+        movies.map(m => console.log(m.name))
+        return {movies}
+    }
 
     constructor(props) {
         super(props)
@@ -41,6 +49,7 @@ class Contact extends Component {
     }
     
     render() {
+        console.log(this.props)
         return (
             <div>
                 This is the contact us page<br></br>
