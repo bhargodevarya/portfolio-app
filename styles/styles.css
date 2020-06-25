@@ -1,0 +1,17 @@
+body, html {
+    /*To make the background image appear full screen on the landing page*/
+    background: url(../images/milky-way-916523_1920.jpg) center center no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+/* # for id selected, . for class selector*/
+
+#myNavbar {
+    /* To make the navbar transparent, !important overrides the value coming from bootstrap*/
+    background-color: transparent !important;
+}
+
+#myNavItem {
+    color: white;
+}

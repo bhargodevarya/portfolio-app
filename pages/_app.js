@@ -1,5 +1,7 @@
 import App from 'next/app'
 import Header from '../component/Header'
+//import style file so that it is available to all components and pages
+import styles from '../styles/styles.css'
 
 //import bootstrap to enable it across the site
 //raw bootstrap works out of the box on each component
