@@ -18,27 +18,6 @@ const Home = (props) => {
         </Row>
       </Container>
       {/* bootstrap container end */}
-
-      {/* bootstrap component start  */}
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link active" href="/contact">
-            contact
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about">
-            about
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/">
-            Home
-          </a>
-        </li>
-      </ul>
-      {/* bootstrap component end  */}
-
     </div>
   );
 };

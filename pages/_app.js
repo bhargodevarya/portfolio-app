@@ -1,5 +1,6 @@
 import App from 'next/app'
 import Header from '../component/Header'
+import NavBar from '../component/NavBar'
 //import style file so that it is available to all components and pages
 import styles from '../styles/styles.css'
 
@@ -34,6 +35,7 @@ class MovieApp extends App {
                 {/* <Header/> */}
                 {/* Each component gets their respective props which are returned from the  
                 getInitialProps function defined in that component */}
+                <NavBar {...pageProps}/>
                 <Component {...pageProps}/>
             </div>
         )
