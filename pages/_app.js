@@ -7,7 +7,10 @@ import styles from '../styles/styles.css'
 //import bootstrap to enable it across the site
 //raw bootstrap works out of the box on each component
 //for using react-bootstrap import the component on the page
+import 'jquery/dist/jquery.min.js'
+import '@popperjs/core/dist/umd/popper.min.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 /**
  * Nextjs component that can be used to wrap up all pages.
