@@ -1,8 +1,6 @@
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import NavDropdown from 'react-bootstrap/NavDropdown'
 import React from "react";
-//import image from '../images/logo_lpg.png'
 
 const RBNavBar = () => {
   return (
