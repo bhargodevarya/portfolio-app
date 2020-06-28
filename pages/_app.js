@@ -1,15 +1,17 @@
 import App from 'next/app'
 import Header from '../component/Header'
 import NavBar from '../component/NavBar'
+import MyNavBar from '../component/RBNavBar'
 //import style file so that it is available to all components and pages
 import styles from '../styles/styles.css'
 
 //import bootstrap to enable it across the site
 //raw bootstrap works out of the box on each component
 //for using react-bootstrap import the component on the page
-import 'jquery/dist/jquery.min.js'
-import '@popperjs/core/dist/umd/popper.min.js'
+//import 'jquery/dist/jquery.min.js'
+//import '@popperjs/core/dist/umd/popper.min.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import RBNavBar from '../component/RBNavBar'
 
 
 /**
@@ -38,7 +40,8 @@ class MovieApp extends App {
                 {/* <Header/> */}
                 {/* Each component gets their respective props which are returned from the  
                 getInitialProps function defined in that component */}
-                <NavBar {...pageProps}/>
+                {/* <NavBar {...pageProps}/> */}
+                <RBNavBar {...pageProps}/>
                 <Component {...pageProps}/>
             </div>
         )

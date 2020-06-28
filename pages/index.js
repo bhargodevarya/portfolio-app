@@ -5,19 +5,19 @@ import Row from "react-bootstrap/Row";
 import MyCaraousel from "../component/MyCarousel";
 import getMovies from "../data/data";
 
+import MyNavBar from '../component/RBNavBar'
+
 const Home = (props) => {
   return (
     <div>
-      
-      {/* bootstrap container start */}
+      {/*
       <Container>
         <Row>This is the first row</Row>
         <Row>
-          {/* passing props to the Caraousel component*/}
           <MyCaraousel movies={props.movies} />
         </Row>
       </Container>
-      {/* bootstrap container end */}
+      */}
     </div>
   );
 };
