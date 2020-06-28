@@ -11,7 +11,8 @@ const RBNavBar = () => {
         <Nav className="ml-auto" id="myNavItem">
           <Nav.Link href="/" id="myNavItem">Home</Nav.Link>
           <Nav.Link href="contact" id= "myNavItem">Contact</Nav.Link>
-          <Nav.Link href="about" id= "myNavItem">About Us</Nav.Link>
+          <Nav.Link href="about" id= "myNavItem">About</Nav.Link>
+          <Nav.Link href="book" id= "myNavItem">Books</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
