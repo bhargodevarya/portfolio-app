@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from 'react-bootstrap/Col'
 import getMovies from "../data/data";
 
 import Form from "react-bootstrap/Form";
@@ -53,37 +56,33 @@ class Contact extends Component {
     console.log(this.props);
     return (
       <div>
-        <Form>
-          <Form.Group controlId="formBasicEmail">
-            <Form.Label style={{ color: "red" }}>Name</Form.Label>
-            <Form.Control
-              type="email"
-              placeholder="How should I address you?"
-            />
-          </Form.Group>
-          <Form.Group controlId="formBasicSubject">
-            <Form.Label style={{ color: "red" }}>Subject</Form.Label>
-            <Form.Control type="input" placeholder="What is this about?" />
-          </Form.Group>
-          <Form.Group controlId="formBasicText">
-            <Form.Label style={{ color: "red" }}>Thoughts</Form.Label>
-            <Form.Control type="text" placeholder="Ok, tell me" />
-          </Form.Group>
+        <Container id="formContainer" className="container">
+          <Row>
+            <Col className="col-md-8 mx-auto">
+          <Form>
+            <Form.Group controlId="formBasicEmail">
+              <Form.Label style={{ color: "red" }}>Name</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="How should I address you?"
+              />
+            </Form.Group>
+            <Form.Group controlId="formBasicSubject">
+              <Form.Label style={{ color: "red" }}>Subject</Form.Label>
+              <Form.Control type="input" placeholder="What is this about?" />
+            </Form.Group>
+            <Form.Group controlId="formBasicText">
+              <Form.Label style={{ color: "red" }}>Thoughts</Form.Label>
+              <Form.Control type="text" placeholder="Ok, tell me" />
+            </Form.Group>
 
-          <Button variant="primary" type="submit">
-            Submit
-          </Button>
-        </Form>
-        This is the contact us page<br></br>
-        <Button onClick={this.increment}>Increment</Button>
-        <br></br>
-        {/* 
-                if you dont want to bind in the constructor
-                <Button onClick={() => this.decrement()}>Decrement</Button><br></br> 
-                */}
-        <Button onClick={this.decrement}>Decrement</Button>
-        <br></br>
-        {this.state.count}
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+          </Form>
+          </Col>
+          </Row>
+        </Container>
       </div>
     );
   }
