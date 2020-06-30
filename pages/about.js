@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 const About = () => {
     /**
@@ -25,12 +28,12 @@ const About = () => {
     }
 
     return (
-        <div>
-            This is the about page<br></br>
-            <Button onClick={increment}>Increment</Button><br></br>
-            <Button onClick={decrement}>Decrement</Button><br></br>
-            {count}
-        </div>
+        <Container>
+            <Row>
+                <Col style={{color:"red"}}>Github</Col>
+                <Col style={{color:"red"}}>Link to github</Col>
+            </Row>
+        </Container>
     )
 }
 
