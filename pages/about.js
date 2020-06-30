@@ -33,6 +33,9 @@ const About = () => {
                 <Col style={{color:"red"}}>Github</Col>
                 <Col><a style={{color:"red"}} href="https://github.com/bhargodevarya">profile</a></Col>
             </Row>
+            <Row>
+                <Col><img src="/github_profile_200px.svg"></img></Col>
+            </Row>
         </Container>
     )
 }
