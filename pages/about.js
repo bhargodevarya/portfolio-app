@@ -31,7 +31,7 @@ const About = () => {
         <Container>
             <Row>
                 <Col style={{color:"red"}}>Github</Col>
-                <Col style={{color:"red"}}>Link to github</Col>
+                <Col><a style={{color:"red"}} href="https://github.com/bhargodevarya">profile</a></Col>
             </Row>
         </Container>
     )
