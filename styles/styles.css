@@ -13,7 +13,8 @@ body, html {
 }
 
 #myNavItem {
-    color: red;
+    color: white;
+    font-weight: bold;
 }
 
 #formContainer {
