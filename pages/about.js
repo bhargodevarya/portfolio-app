@@ -39,14 +39,14 @@ const About = () => {
       </Row>
       <Row>
         <Col>
-          <Card style={{ width: '18rem' }}>
+          <Card style={{ width: '18rem', backgroundColor: 'grey'}}>
             <Card.Img variant="top" src="/github_profile_50px.svg" />
             <Card.Body>
               <Card.Title>Github Profile</Card.Title>
               <Card.Text>
                 This is my github profile, feel free to visit.
               </Card.Text>
-              <Button variant="link" href="https://github.com/bhargodevarya">Let's Github</Button>
+              <Button variant="primary" href="https://github.com/bhargodevarya">Let's Github</Button>
             </Card.Body>
           </Card>
         </Col>
