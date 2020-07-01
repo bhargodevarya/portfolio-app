@@ -20,3 +20,8 @@ body, html {
 #formContainer {
     padding-top: 70px;
 }
+
+#bookId {
+    flex-direction: row !important;
+    color: red;
+}
