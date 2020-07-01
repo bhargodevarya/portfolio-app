@@ -20,4 +20,10 @@ class Book extends Component {
   }
 }
 
+//TODO, make call to get the book details from the server
+export function getStaticProps() {
+    console.log("Static props for books page")
+    return {props: {status: 200}}
+}
+
 export default Book;
