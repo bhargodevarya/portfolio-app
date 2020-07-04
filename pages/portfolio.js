@@ -3,22 +3,31 @@ import axios from "axios";
 import { getPortfolios } from "../data/data";
 
 import Card from "react-bootstrap/Card";
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button'
+
+import PortFolioModal from '../component/PortFolioModal'
 
 export default class portfolio extends Component {
-
   constructor(props) {
     super(props);
-    this.state= {
-        show: false
-    }
-    this.handleClick = this.handleClick.bind(this)
+    this.state = {
+      show: false,
+      portfolio: {
+          shortDesc: '',
+          longDesc: '',
+          org: '',
+          designation:''
+      }
+    };
+    this.handleClick = this.handleClick.bind(this);
+    this.handleDetailsClick = this.handleDetailsClick.bind(this)
   }
 
-  handleClick() {
-    this.setState({show: !this.state.show})
-    console.log(this.state.show);
+  handleClick(e) {
+    this.setState({ show: !this.state.show });
+  }
+
+  handleDetailsClick(d, ld, sd, o) {
+      this.setState({show: !this.state.show, longDesc: ld, shortDesc: sd, org:o, designation:d})      
   }
 
   processPortfolios(portfolios) {
@@ -32,29 +41,17 @@ export default class portfolio extends Component {
             {portfolio.location}
           </Card.Subtitle>
           <Card.Text>{portfolio.shortDesc}</Card.Text>
-          <Card.Link href="#" onClick={this.handleClick}>
-            Details
-          </Card.Link>
+          <Card.Link href="#" onClick={() => this.handleDetailsClick(portfolio.designation, portfolio.longDesc, portfolio.shortDesc, portfolio.organization)}>Details</Card.Link>
         </Card.Body>
       </Card>
     ));
   }
 
   render() {
-    console.log(this.props.portfolio[0].designation);
     return (
       <div>
-        <Modal show={this.state.show} onHide={this.handleClick}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-          <Modal.Footer>
-            <Button variant="secondary" onClick={this.handleClick}>
-              Close
-            </Button>
-          </Modal.Footer>
-        </Modal>
+        <PortFolioModal show={this.state.show} handleClick={this.handleClick} shortDesc={this.state.shortDesc} 
+        longDesc={this.state.longDesc} org={this.state.org} designation={this.state.designation}/>
         {this.processPortfolios(this.props.portfolio)}
       </div>
     );
