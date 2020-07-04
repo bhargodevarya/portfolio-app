@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import MyCaraousel from "../component/MyCarousel";
-import getMovies from "../data/data";
+import {getMovies} from "../data/data";
 
 import MyNavBar from '../component/RBNavBar'
 
