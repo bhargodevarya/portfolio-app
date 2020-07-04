@@ -13,6 +13,7 @@ const RBNavBar = () => {
           <Nav.Link href="contact" id= "myNavItem">Contact</Nav.Link>
           <Nav.Link href="about" id= "myNavItem">About</Nav.Link>
           <Nav.Link href="book" id= "myNavItem">Books</Nav.Link>
+          <Nav.Link href="portfolio" id= "myNavItem">Portfolio</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
