@@ -20,10 +20,6 @@ class Contact extends Component {
     this.state = { count: 0 };
     this.decrement = this.decrement.bind(this);
   }
-
-  componentDidMount() {
-    console.log("ComponentDidMount")
-  }
   /*
     You can initiate the state like this as well, but you wont be able to use is in any advanced use cases
     state = {
@@ -59,9 +55,6 @@ class Contact extends Component {
     console.log(this.props);
     return (
       <div>
-        <div id="typedDiv">
-        
-        </div>
         <Container id="formContainer" className="container">
           <Row>
             <Col className="col-md-8 mx-auto">
