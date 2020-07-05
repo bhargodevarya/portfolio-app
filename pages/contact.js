@@ -54,7 +54,7 @@ class Contact extends Component {
   render() {
     console.log(this.props);
     return (
-      <div>
+      <div id="contactFormId">
         <Container id="formContainer" className="container">
           <Row>
             <Col className="col-md-8 mx-auto">
