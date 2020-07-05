@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from 'react-bootstrap/Col'
-import getMovies from "../data/data";
+import {getMovies} from "../data/data";
 
 import Form from "react-bootstrap/Form";
 
@@ -21,6 +21,9 @@ class Contact extends Component {
     this.decrement = this.decrement.bind(this);
   }
 
+  componentDidMount() {
+    console.log("ComponentDidMount")
+  }
   /*
     You can initiate the state like this as well, but you wont be able to use is in any advanced use cases
     state = {
@@ -56,6 +59,9 @@ class Contact extends Component {
     console.log(this.props);
     return (
       <div>
+        <div id="typedDiv">
+        
+        </div>
         <Container id="formContainer" className="container">
           <Row>
             <Col className="col-md-8 mx-auto">
