@@ -7,6 +7,8 @@ import {getMovies} from "../data/data";
 
 import MyNavBar from '../component/RBNavBar'
 
+import TypedComponent from '../component/TypedComponent'
+
 const Home = (props) => {
   return (
     <div>
@@ -18,6 +20,7 @@ const Home = (props) => {
         </Row>
       </Container>
       */}
+      <TypedComponent/>
     </div>
   );
 };

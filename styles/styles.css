@@ -1,6 +1,6 @@
 body, html {
     /*To make the background image appear full screen on the landing page*/
-    background: url(../images/milky-way-916523_1920.jpg) center center no-repeat;
+    /* background: url(../images/milky-way-916523_1920.jpg) center center no-repeat; */
     background-size: cover;
     height: 100%;
 }
