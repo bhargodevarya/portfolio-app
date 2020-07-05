@@ -11,6 +11,7 @@ import styles from '../styles/styles.css'
 //import 'jquery/dist/jquery.min.js'
 //import '@popperjs/core/dist/umd/popper.min.js'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'typed.js/lib/typed.min.js'
 import RBNavBar from '../component/RBNavBar'
 
 
