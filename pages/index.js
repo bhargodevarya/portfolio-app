@@ -20,7 +20,7 @@ const Home = (props) => {
         </Row>
       </Container>
       */}
-      <TypedComponent/>
+      <TypedComponent strings="Developer, Creator, Curious"/>
     </div>
   );
 };
