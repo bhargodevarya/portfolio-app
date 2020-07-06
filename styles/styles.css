@@ -27,6 +27,15 @@ body, html {
 }
 
 #typedDiv {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+}
+
+.typedIntro {
+    text-align: center;
     font-size: xx-large;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Typed from "typed.js/lib/typed.min.js";
 
 export default class TypedComponent extends Component {
-
   constructor(props) {
     super(props);
   }
@@ -14,13 +13,18 @@ export default class TypedComponent extends Component {
       strings: this.props.strings.split(","),
       typeSpeed: 50,
       backSpeed: 50,
-      loop: true,
+      loop: true
     };
 
     this.typed = new Typed("#typedDiv", options);
   }
 
   render() {
-    return <div id="typedDiv"></div>;
+    return (
+      <div className='typedIntro'>
+          Hi, I am Bhargodev Arya
+        <div id="typedDiv"></div>
+      </div>
+    );
   }
 }
