@@ -5,6 +5,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 
+import CloudCard from '../component/cards/CloudCard'
+import FrontEndCard from '../component/cards/FrontEndCard'
+import BackEndCard from '../component/cards/BackendCard'
+import DevopsCard from '../component/cards/DevopsCard'
+
 const About = () => {
   /**
    * useState is a hook which allows functional components to play with state
@@ -37,7 +42,7 @@ const About = () => {
           </a>
         </Col>
       </Row>
-      <Row>
+      {/* <Row>
         <Col>
           <Card style={{ width: '18rem', backgroundColor: 'grey'}}>
             <Card.Img variant="top" src="/github_profile_50px.svg" />
@@ -49,6 +54,20 @@ const About = () => {
               <Button variant="primary" href="https://github.com/bhargodevarya">Let's Github</Button>
             </Card.Body>
           </Card>
+        </Col>
+      </Row> */}
+      <Row>
+        <Col>
+        <CloudCard/>
+        </Col>
+        <Col>
+        <FrontEndCard/>
+        </Col>
+        <Col>
+        <BackEndCard/>
+        </Col>
+        <Col>
+        <DevopsCard/>
         </Col>
       </Row>
     </Container>
