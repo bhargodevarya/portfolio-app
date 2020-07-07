@@ -41,3 +41,12 @@ body, html {
     font-family: 'Courier New', Courier, monospace;
     color: white;
 }
+
+#beImg {
+    height: 15rem;
+    background-color: whitesmoke;
+}
+
+#cardId {
+    width: 18rem;
+}
