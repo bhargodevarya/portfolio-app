@@ -5,8 +5,8 @@ export default class CloudCard extends Component {
     render() {
         return (
             <div>
-                <Card style={{ width: '18rem', backgroundColor: 'grey'}}>
-            <Card.Img variant="top" src="/undraw_going_up_ttm5.png" />
+                <Card id="cardId">
+            <Card.Img id="beImg" variant="top" src="/undraw_going_up_ttm5.png" />
             <Card.Body>
               <Card.Title>Cloud</Card.Title>
               <Card.Text>
