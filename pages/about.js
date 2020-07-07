@@ -4,12 +4,12 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
-import CardDeck from 'react-bootstrap/CardDeck'
+import CardDeck from "react-bootstrap/CardDeck";
 
-import CloudCard from '../component/cards/CloudCard'
-import FrontEndCard from '../component/cards/FrontEndCard'
-import BackEndCard from '../component/cards/BackendCard'
-import DevopsCard from '../component/cards/DevopsCard'
+import CloudCard from "../component/cards/CloudCard";
+import FrontEndCard from "../component/cards/FrontEndCard";
+import BackEndCard from "../component/cards/BackendCard";
+import DevopsCard from "../component/cards/DevopsCard";
 
 const About = () => {
   /**
@@ -72,13 +72,14 @@ const About = () => {
     //     </Col>
     //   </Row>
     // </Container>
-    
-    <CardDeck>
-      <CloudCard/>
-      <BackEndCard/>
-      <FrontEndCard/>
-      <DevopsCard/>
-    </CardDeck>
+    <Container>
+      <Row>
+        <Col className="techcard"><BackEndCard /></Col>
+        <Col className="techcard"><FrontEndCard/></Col>
+        <Col className="techcard"><DevopsCard/></Col>
+        <Col className="techcard"><CloudCard/></Col>
+      </Row>
+    </Container>
   );
 };
 
