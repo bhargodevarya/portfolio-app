@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
+import CardDeck from 'react-bootstrap/CardDeck'
 
 import CloudCard from '../component/cards/CloudCard'
 import FrontEndCard from '../component/cards/FrontEndCard'
@@ -33,44 +34,51 @@ const About = () => {
   };
 
   return (
-    <Container>
-      <Row>
-        <Col style={{ color: "red" }}>Github</Col>
-        <Col>
-          <a style={{ color: "red" }} href="https://github.com/bhargodevarya">
-            profile
-          </a>
-        </Col>
-      </Row>
-      {/* <Row>
-        <Col>
-          <Card style={{ width: '18rem', backgroundColor: 'grey'}}>
-            <Card.Img variant="top" src="/github_profile_50px.svg" />
-            <Card.Body>
-              <Card.Title>Github Profile</Card.Title>
-              <Card.Text>
-                This is my github profile, feel free to visit.
-              </Card.Text>
-              <Button variant="primary" href="https://github.com/bhargodevarya">Let's Github</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row> */}
-      <Row>
-        <Col>
-        <CloudCard/>
-        </Col>
-        <Col>
-        <FrontEndCard/>
-        </Col>
-        <Col>
-        <BackEndCard/>
-        </Col>
-        <Col>
-        <DevopsCard/>
-        </Col>
-      </Row>
-    </Container>
+    // <Container>
+    //   <Row>
+    //     <Col style={{ color: "red" }}>Github</Col>
+    //     <Col>
+    //       <a style={{ color: "red" }} href="https://github.com/bhargodevarya">
+    //         profile
+    //       </a>
+    //     </Col>
+    //   </Row>
+    //   {/* <Row>
+    //     <Col>
+    //       <Card style={{ width: '18rem', backgroundColor: 'grey'}}>
+    //         <Card.Img variant="top" src="/github_profile_50px.svg" />
+    //         <Card.Body>
+    //           <Card.Title>Github Profile</Card.Title>
+    //           <Card.Text>
+    //             This is my github profile, feel free to visit.
+    //           </Card.Text>
+    //           <Button variant="primary" href="https://github.com/bhargodevarya">Let's Github</Button>
+    //         </Card.Body>
+    //       </Card>
+    //     </Col>
+    //   </Row> */}
+    //   <Row>
+    //     <Col>
+    //     <CloudCard/>
+    //     </Col>
+    //     <Col>
+    //     <FrontEndCard/>
+    //     </Col>
+    //     <Col>
+    //     <BackEndCard/>
+    //     </Col>
+    //     <Col>
+    //     <DevopsCard/>
+    //     </Col>
+    //   </Row>
+    // </Container>
+    
+    <CardDeck>
+      <CloudCard/>
+      <BackEndCard/>
+      <FrontEndCard/>
+      <DevopsCard/>
+    </CardDeck>
   );
 };
 
