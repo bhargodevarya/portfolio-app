@@ -52,6 +52,38 @@ const MOVIE_DATA =
     ]
   }
 
+  const BOOK_DATA = {
+    books: [
+    {
+      category: ["lifestyle", "self-help"],
+      _id: "5eff15975bbcf3c7fde427c4",
+      author: "Robin Sharma",
+      image: "https://book-app-images.s3.amazonaws.com/5AMClub.jpg",
+      description: "Morning routing book",
+      __v: 0,
+      title: "The 5 AM club",
+    },
+    {
+      category: ["lifestyle", "self-help"],
+      _id: "5eff1eac875d54c46197df5a",
+      author: "Jordan B. Peterson",
+      image: "https://book-app-images.s3.amazonaws.com/12rulesforlife.jpg",
+      description: "Rules for life",
+      __v: 0,
+      title: "12 rules for life",
+    },
+    {
+      category: ["history", "biography"],
+      _id: "5eff20a9b70e60b255a75a58",
+      author: "Vikram Sampath",
+      image: "https://book-app-images.s3.amazonaws.com/savarkarBook.jpg",
+      description: "Biography of veer Savarkar",
+      __v: 0,
+      title: "Savarkar echoes from a forgotten past",
+    },
+  ]
+}
+
   export const getMovies = () => {
       return new Promise((resolve, reject) => {
           resolve(MOVIE_DATA)
@@ -59,3 +91,7 @@ const MOVIE_DATA =
   }
 
   export const getPortfolios = () => new Promise((resolve, reject) => resolve(PORTFOLIO_DATA))
+
+  export const getBooks = () => {
+    return new Promise((resolve, reject) => resolve(BOOK_DATA))
+  }
