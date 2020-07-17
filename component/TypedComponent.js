@@ -22,7 +22,6 @@ export default class TypedComponent extends Component {
   render() {
     return (
       <div className='typedIntro'>
-          Hi, I am Bhargodev Arya
         <div id="typedDiv"></div>
       </div>
     );
