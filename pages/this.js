@@ -18,6 +18,14 @@ export default class ThisComp extends Component {
             style={{ width: "160px", paddingRight: "20px" }}
             src="/mongodb.svg"
           ></img>
+          <img
+            style={{ width: "100px", paddingRight: "20px" }}
+            src="/aws.png"
+          ></img>
+          <img
+            style={{ width: "140px", paddingRight: "20px" }}
+            src="/nodejs.png"
+          ></img>
         </div>
       </div>
     );
