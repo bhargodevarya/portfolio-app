@@ -50,6 +50,11 @@ body, html {
     background-color: whitesmoke;
 }
 
+.imageHome {
+    padding-left: 100px;
+    height: 400px;
+}
+
 /*TODO, figure out the right width*/
 /* #cardId {
     width: 18rem;
