@@ -27,7 +27,7 @@ const Home = (props) => {
       </Container>
       */}
       <TypedComponent strings="Developer, Creator, Curious"/>
-      <img class="imageHome" src="/animation_4.gif"></img>
+      <img className="imageHome" src="/animation_4.gif"></img>
     </div>
   );
 };
