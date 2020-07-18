@@ -74,6 +74,13 @@ body, html {
     height:100%;
 }
 
+.thisText {
+    color: white;
+    font-size: large; 
+    font-weight: Bold;
+    text-align: center;
+}
+
 /*TODO, figure out the right width*/
 /* #cardId {
     width: 18rem;

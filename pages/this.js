@@ -1,38 +1,45 @@
 import React, { Component } from "react";
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 export default class ThisComp extends Component {
   render() {
     return (
-      <div style={{ color: "white", fontSize: "large", fontWeight: "Bold", textAlign: 'center'}}>
+      <div className="thisText">
         Built with loads of love and the following
-        <Container style={{paddingTop:'10rem'}}>
+        <Container style={{ paddingTop: "10rem" }}>
           <Row>
             <Col>
-            <img
-            style={{ width: "100px", paddingRight: "20px" }}
-            src="/next-js-seeklogo.com.svg"
-          ></img>
+              <a href='http://www.nextjs.com'><img
+                style={{ width: "100px", paddingRight: "20px" }}
+                src="/next-js-seeklogo.com.svg"
+              ></img></a>
             </Col>
             <Col>
-            <img
-            style={{ width: "100px", paddingRight: "20px" }}
-            src="/react.svg"
-          ></img></Col>
-          <Col><img
-            style={{ width: "160px", paddingRight: "20px" }}
-            src="/mongodb.svg"
-          ></img></Col>
-          <Col><img
-            style={{ width: "100px", paddingRight: "20px" }}
-            src="/aws.png"
-          ></img></Col>
-          <Col><img
-            style={{ width: "140px", paddingRight: "20px" }}
-            src="/nodejs.png"
-          ></img></Col>
+              <a href="http://www.reactjs.org"><img
+                style={{ width: "100px", paddingRight: "20px" }}
+                src="/react.svg"
+              ></img></a>
+            </Col>
+            <Col>
+              <a href="https://www.mongodb.com/"><img
+                style={{ width: "160px", paddingRight: "20px" }}
+                src="/mongodb.svg"
+              ></img></a>
+            </Col>
+            <Col>
+              <a href="https://aws.amazon.com/"><img
+                style={{ width: "100px", paddingRight: "20px" }}
+                src="/aws.png"
+              ></img></a>
+            </Col>
+            <Col>
+              <a href="https://nodejs.org/en/"><img
+                style={{ width: "140px", paddingRight: "20px" }}
+                src="/nodejs.png"
+              ></img></a>
+            </Col>
           </Row>
         </Container>
       </div>
