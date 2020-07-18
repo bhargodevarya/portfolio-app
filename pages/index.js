@@ -26,8 +26,11 @@ const Home = (props) => {
         </Row>
       </Container>
       */}
-      <TypedComponent strings="Developer, Creator, Curious"/>
-      <img className="imageHome" src="/animation_4.gif"></img>
+      <TypedComponent strings="Backend, Frontend, And everything in between"/>
+      {/* <img className="imageHome" src="/animation_4.gif"></img> */}
+      <p className="typedIntro">Welcome to my site.
+      I hope this makes you curious.
+      Feel free to explore and you can contact me here</p>
     </div>
   );
 };

@@ -11,7 +11,7 @@ export default class TypedComponent extends Component {
 
     const options = {
       strings: this.props.strings.split(","),
-      typeSpeed: 50,
+      typeSpeed: 30,
       backSpeed: 50,
       loop: true
     };
