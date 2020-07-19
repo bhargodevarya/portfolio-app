@@ -3,7 +3,7 @@ body, html {
     /* background: url(../images/milky-way-916523_1920.jpg) center center no-repeat;
     background-size: cover;
     height: 100%; */
-    background-color: #0047ab !important;
+    background-color: #1a222c !important;
 }
 
 /* # for id selected, . for class selector*/
@@ -55,16 +55,6 @@ body, html {
     height: 400px;
 }
 
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #b61924;
-    background-image: url("");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
-  }
 
   #particle-canvas {
     position:fixed !important;
