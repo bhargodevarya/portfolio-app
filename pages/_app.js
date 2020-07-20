@@ -35,7 +35,6 @@ class MovieApp extends App {
 
     return (
       <div>
-        {/* <Header/> */}
         {/* Each component gets their respective props which are returned from the  
                 getInitialProps function defined in that component */}
         {/* <NavBar {...pageProps}/> */}
