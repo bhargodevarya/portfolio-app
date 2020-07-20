@@ -9,12 +9,6 @@ import MyNavBar from '../component/RBNavBar'
 
 import TypedComponent from '../component/TypedComponent'
 
-// imported to test, use in some other component
-import CloudCard from '../component/cards/CloudCard'
-import FrontEndCard from '../component/cards/FrontEndCard'
-import BackEndCard from '../component/cards/BackendCard'
-import DevopsCard from '../component/cards/DevopsCard'
-
 const Home = (props) => {
   return (
     <div>
