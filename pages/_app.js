@@ -1,9 +1,7 @@
 import App from "next/app";
-import Header from "../component/Header";
-import NavBar from "../component/NavBar";
-import MyNavBar from "../component/RBNavBar";
 //import style file so that it is available to all components and pages
 import styles from "../styles/styles.css";
+import { getParticleConfig } from '../data/data'
 
 //import bootstrap to enable it across the site
 //raw bootstrap works out of the box on each component
@@ -42,24 +40,7 @@ class MovieApp extends App {
                 getInitialProps function defined in that component */}
         {/* <NavBar {...pageProps}/> */}
         <Particles id='particle-canvas'
-          params={{
-            particles: {
-              number: {
-                value: 50,
-              },
-              size: {
-                value: 3,
-              },
-            },
-            interactivity: {
-              events: {
-                onhover: {
-                  enable: true,
-                  mode: "repulse",
-                },
-              },
-            },
-          }}
+          params={getParticleConfig()}
         />
         <RBNavBar {...pageProps} />
         <Component {...pageProps} />

@@ -84,6 +84,25 @@ const MOVIE_DATA =
   ]
 }
 
+const PARTICLE_CONFIG = {
+  particles: {
+    number: {
+      value: 50,
+    },
+    size: {
+      value: 3,
+    },
+  },
+  interactivity: {
+    events: {
+      onhover: {
+        enable: true,
+        mode: "repulse",
+      },
+    },
+  },
+}
+
   export const getMovies = () => {
       return new Promise((resolve, reject) => {
           resolve(MOVIE_DATA)
@@ -95,3 +114,5 @@ const MOVIE_DATA =
   export const getBooks = () => {
     return new Promise((resolve, reject) => resolve(BOOK_DATA))
   }
+
+  export const getParticleConfig = () => PARTICLE_CONFIG
