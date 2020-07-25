@@ -8,7 +8,7 @@ import TypedComponent from '../component/TypedComponent'
 
 const Home = (props) => {
   return (
-    <div>
+    <div style={{paddingTop: '7rem'}}>
       {/*
       <Container>
         <Row>This is the first row</Row>
