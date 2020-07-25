@@ -63,21 +63,21 @@ class Contact extends Component {
             <Col>
               <Form>
                 <Form.Group controlId="formBasicEmail">
-                  <Form.Label style={{ color: "red" }}>Name</Form.Label>
+                  <Form.Label className='myNavItem'>Name</Form.Label>
                   <Form.Control
                     type="email"
                     placeholder="How should I address you?"
                   />
                 </Form.Group>
                 <Form.Group controlId="formBasicSubject">
-                  <Form.Label style={{ color: "red" }}>Subject</Form.Label>
+                  <Form.Label className='myNavItem'>Subject</Form.Label>
                   <Form.Control
                     type="input"
                     placeholder="What is this about?"
                   />
                 </Form.Group>
                 <Form.Group controlId="formBasicText">
-                  <Form.Label style={{ color: "red" }}>Thoughts</Form.Label>
+                  <Form.Label className='myNavItem'>Thoughts</Form.Label>
                   <Form.Control type="text" placeholder="Ok, tell me" />
                 </Form.Group>
 

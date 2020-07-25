@@ -14,8 +14,8 @@ body, html {
     /* background-color:#0047ab !important; */
 }
 
-#myNavItem {
-    color: white;
+.myNavItem {
+    color: white !important;
     font-weight: bold;
 }
 
