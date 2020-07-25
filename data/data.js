@@ -134,23 +134,28 @@ const TECH_DATA = {
   technologies: [
     {
       url: "http://www.nextjs.com",
-      image:"/next-js-seeklogo.com.svg"
+      image:"/next-js-seeklogo.com.svg",
+      style: { width: "140px", paddingRight: "20px" }
     },
     {
       url: "http://www.reactjs.org",
-      image:"/react.svg"
+      image:"/react.svg",
+      style: { width: "100px", paddingRight: "20px" }
     },
     {
       url: "https://www.mongodb.com/",
-      image:"/mongodb.svg"
+      image:"/mongodb.svg",
+      style: { width: "160px", paddingRight: "20px" }
     },
     {
       url: "https://aws.amazon.com/",
-      image:"/aws.png"
+      image:"/aws.png",
+      style: { width: "100px", paddingRight: "20px" }
     },
     {
       url: "https://nodejs.org/en/",
-      image:"/nodejs.png"
+      image:"/nodejs.png",
+      style: { width: "140px", paddingRight: "20px" }
     },
   ]
 }
