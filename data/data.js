@@ -130,6 +130,31 @@ const PARTICLE_CONFIG = {
   },
 }
 
+const TECH_DATA = {
+  technologies: [
+    {
+      url: "http://www.nextjs.com",
+      image:"/next-js-seeklogo.com.svg"
+    },
+    {
+      url: "http://www.reactjs.org",
+      image:"/react.svg"
+    },
+    {
+      url: "https://www.mongodb.com/",
+      image:"/mongodb.svg"
+    },
+    {
+      url: "https://aws.amazon.com/",
+      image:"/aws.png"
+    },
+    {
+      url: "https://nodejs.org/en/",
+      image:"/nodejs.png"
+    },
+  ]
+}
+
   export const getMovies = () => {
       return new Promise((resolve, reject) => {
           resolve(MOVIE_DATA)
@@ -143,3 +168,5 @@ const PARTICLE_CONFIG = {
   }
 
   export const getParticleConfig = () => PARTICLE_CONFIG
+
+  export const getTechnologies = () => new Promise((resolve, reject) => resolve(TECH_DATA))
