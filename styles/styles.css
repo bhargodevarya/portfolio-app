@@ -72,6 +72,10 @@ body, html {
     padding-top: 10rem;
 }
 
+.homeIntroText {
+    padding: 7rem;
+}
+
 /*TODO, figure out the right width*/
 /* #cardId {
     width: 18rem;

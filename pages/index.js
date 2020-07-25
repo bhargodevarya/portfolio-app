@@ -6,7 +6,7 @@ import TypedComponent from "../component/TypedComponent";
 
 const Home = (props) => {
   return (
-    <div style={{ paddingTop: "7rem" }}>
+    <div className='homeIntroText'>
       <TypedComponent strings={props.typedText} />
       <Container>
         <Row>
