@@ -7,7 +7,7 @@ import TypedComponent from "../component/TypedComponent";
 const Home = (props) => {
   return (
     <div style={{ paddingTop: "7rem" }}>
-      <TypedComponent strings="Backend, Frontend, And everything in between" />
+      <TypedComponent strings={props.typedText} />
       <Container>
         <Row>
           <p className="typedIntro">{props.introText}</p>
@@ -29,8 +29,8 @@ Home.getInitialProps = async () => {
   //return the props directly, what ever is returned is available on props variable in the component
   return {
     movies,
-    introText:
-      "Welcome to my site. I hope this makes you curious. Feel free to explore and you can contact me here",
+    introText: "Welcome to my site. I hope this makes you curious. Feel free to explore and you can contact me here",
+    typedText: "Backend, Frontend, And everything in between"
   };
 };
 
