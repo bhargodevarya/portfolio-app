@@ -13,7 +13,7 @@ export default class ThisComp extends Component {
 
   techComp(technologies) {
     return technologies.map((tech) => (
-      <Col>
+      <Col style={{paddingTop:'2rem'}}>
         <a href={tech.url}>
           <img
             style={tech.style}
