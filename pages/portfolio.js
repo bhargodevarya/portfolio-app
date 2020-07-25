@@ -23,6 +23,7 @@ export default class portfolio extends Component {
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleDetailsClick = this.handleDetailsClick.bind(this)
+    this.createCard = this.createCard.bind(this)
   }
 
   handleClick(e) {
@@ -33,20 +34,24 @@ export default class portfolio extends Component {
       this.setState({show: !this.state.show, longDesc: ld, shortDesc: sd, org:o, designation:d})      
   }
 
-  processPortfolios(portfolios) {
-    return portfolios.map((portfolio) => (
-      <Col><Card style={{ width: "18rem" }}>
+  createCard(designation, org, location, shortDesc, longDesc) {
+    return <Col><Card style={{ width: "18rem" }}>
         <Card.Body>
           <Card.Title>
-            {portfolio.designation} at {portfolio.organization}
+            {designation} at {org}
           </Card.Title>
           <Card.Subtitle className="mb-2 text-muted">
-            {portfolio.location}
+            {location}
           </Card.Subtitle>
-          <Card.Text>{portfolio.shortDesc}</Card.Text>
-          <Card.Link href="#" onClick={() => this.handleDetailsClick(portfolio.designation, portfolio.longDesc, portfolio.shortDesc, portfolio.organization)}>Details</Card.Link>
+          <Card.Text>{shortDesc}</Card.Text>
+          <Card.Link href="#" onClick={() => this.handleDetailsClick(designation, longDesc, shortDesc, org)}>Details</Card.Link>
         </Card.Body>
       </Card></Col>
+  }
+
+  processPortfolios(portfolios) {
+    return portfolios.map((portfolio, index) => (
+      this.createCard(portfolio.designation, portfolio.organization, portfolio.location, portfolio.shortDesc, portfolio.longDesc)
     ));
   }
 
