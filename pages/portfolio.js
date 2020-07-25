@@ -3,11 +3,11 @@ import axios from "axios";
 import { getPortfolios } from "../data/data";
 
 import Card from "react-bootstrap/Card";
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
-import PortFolioModal from '../component/PortFolioModal'
+import PortFolioModal from "../component/PortFolioModal";
 
 export default class portfolio extends Component {
   constructor(props) {
@@ -15,15 +15,15 @@ export default class portfolio extends Component {
     this.state = {
       show: false,
       portfolio: {
-          shortDesc: '',
-          longDesc: '',
-          org: '',
-          designation:''
-      }
+        shortDesc: "",
+        longDesc: "",
+        org: "",
+        designation: "",
+      },
     };
     this.handleClick = this.handleClick.bind(this);
-    this.handleDetailsClick = this.handleDetailsClick.bind(this)
-    this.createCard = this.createCard.bind(this)
+    this.handleDetailsClick = this.handleDetailsClick.bind(this);
+    this.createCard = this.createCard.bind(this);
   }
 
   handleClick(e) {
@@ -31,40 +31,68 @@ export default class portfolio extends Component {
   }
 
   handleDetailsClick(d, ld, sd, o) {
-      this.setState({show: !this.state.show, longDesc: ld, shortDesc: sd, org:o, designation:d})      
+    this.setState({
+      show: !this.state.show,
+      longDesc: ld,
+      shortDesc: sd,
+      org: o,
+      designation: d,
+    });
   }
 
   createCard(designation, org, location, shortDesc, longDesc) {
-    return <Col><Card style={{ width: "18rem" }}>
-        <Card.Body>
-          <Card.Title>
-            {designation} at {org}
-          </Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">
-            {location}
-          </Card.Subtitle>
-          <Card.Text>{shortDesc}</Card.Text>
-          <Card.Link href="#" onClick={() => this.handleDetailsClick(designation, longDesc, shortDesc, org)}>Details</Card.Link>
-        </Card.Body>
-      </Card></Col>
+    return (
+      <Col>
+        <Card style={{ width: "18rem" }}>
+          <Card.Body>
+            <Card.Title>
+              {designation} at {org}
+            </Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">
+              {location}
+            </Card.Subtitle>
+            <Card.Text>{shortDesc}</Card.Text>
+            <Card.Link
+              href="#"
+              onClick={() =>
+                this.handleDetailsClick(designation, longDesc, shortDesc, org)
+              }
+            >
+              Details
+            </Card.Link>
+          </Card.Body>
+        </Card>
+      </Col>
+    );
   }
 
   processPortfolios(portfolios) {
-    return portfolios.map((portfolio, index) => (
-      this.createCard(portfolio.designation, portfolio.organization, portfolio.location, portfolio.shortDesc, portfolio.longDesc)
-    ));
+    return portfolios.map((portfolio, index) => {
+      return this.createCard(
+        portfolio.designation,
+        portfolio.organization,
+        portfolio.location,
+        portfolio.shortDesc,
+        portfolio.longDesc
+      )
+    }
+    );
   }
 
   render() {
     return (
       <div>
         <Container>
-          <Row>
-            {this.processPortfolios(this.props.portfolio)}            
-          </Row>
+          <Row>{this.processPortfolios(this.props.portfolio)}</Row>
         </Container>
-        <PortFolioModal show={this.state.show} handleClick={this.handleClick} shortDesc={this.state.shortDesc} 
-        longDesc={this.state.longDesc} org={this.state.org} designation={this.state.designation}/>
+        <PortFolioModal
+          show={this.state.show}
+          handleClick={this.handleClick}
+          shortDesc={this.state.shortDesc}
+          longDesc={this.state.longDesc}
+          org={this.state.org}
+          designation={this.state.designation}
+        />
       </div>
     );
   }

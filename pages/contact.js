@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import Col from 'react-bootstrap/Col'
-import {getMovies} from "../data/data";
+import Col from "react-bootstrap/Col";
+import { getMovies } from "../data/data";
 
 import Form from "react-bootstrap/Form";
 
@@ -57,29 +57,35 @@ class Contact extends Component {
       <div id="contactFormId">
         <Container id="formContainer" className="container">
           <Row>
-            <Col className="col-md-8 mx-auto">
-          <Form>
-            <Form.Group controlId="formBasicEmail">
-              <Form.Label style={{ color: "red" }}>Name</Form.Label>
-              <Form.Control
-                type="email"
-                placeholder="How should I address you?"
-              />
-            </Form.Group>
-            <Form.Group controlId="formBasicSubject">
-              <Form.Label style={{ color: "red" }}>Subject</Form.Label>
-              <Form.Control type="input" placeholder="What is this about?" />
-            </Form.Group>
-            <Form.Group controlId="formBasicText">
-              <Form.Label style={{ color: "red" }}>Thoughts</Form.Label>
-              <Form.Control type="text" placeholder="Ok, tell me" />
-            </Form.Group>
+            <Col>
+              <img src="/undraw_contact_us.svg"></img>
+            </Col>
+            <Col>
+              <Form>
+                <Form.Group controlId="formBasicEmail">
+                  <Form.Label style={{ color: "red" }}>Name</Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="How should I address you?"
+                  />
+                </Form.Group>
+                <Form.Group controlId="formBasicSubject">
+                  <Form.Label style={{ color: "red" }}>Subject</Form.Label>
+                  <Form.Control
+                    type="input"
+                    placeholder="What is this about?"
+                  />
+                </Form.Group>
+                <Form.Group controlId="formBasicText">
+                  <Form.Label style={{ color: "red" }}>Thoughts</Form.Label>
+                  <Form.Control type="text" placeholder="Ok, tell me" />
+                </Form.Group>
 
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </Form>
-          </Col>
+                <Button variant="primary" type="submit">
+                  Submit
+                </Button>
+              </Form>
+            </Col>
           </Row>
         </Container>
       </div>
