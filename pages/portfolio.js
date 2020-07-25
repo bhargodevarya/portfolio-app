@@ -3,6 +3,9 @@ import axios from "axios";
 import { getPortfolios } from "../data/data";
 
 import Card from "react-bootstrap/Card";
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 import PortFolioModal from '../component/PortFolioModal'
 
@@ -32,7 +35,7 @@ export default class portfolio extends Component {
 
   processPortfolios(portfolios) {
     return portfolios.map((portfolio) => (
-      <Card style={{ width: "18rem" }}>
+      <Col><Card style={{ width: "18rem" }}>
         <Card.Body>
           <Card.Title>
             {portfolio.designation} at {portfolio.organization}
@@ -43,16 +46,20 @@ export default class portfolio extends Component {
           <Card.Text>{portfolio.shortDesc}</Card.Text>
           <Card.Link href="#" onClick={() => this.handleDetailsClick(portfolio.designation, portfolio.longDesc, portfolio.shortDesc, portfolio.organization)}>Details</Card.Link>
         </Card.Body>
-      </Card>
+      </Card></Col>
     ));
   }
 
   render() {
     return (
       <div>
+        <Container>
+          <Row>
+            {this.processPortfolios(this.props.portfolio)}            
+          </Row>
+        </Container>
         <PortFolioModal show={this.state.show} handleClick={this.handleClick} shortDesc={this.state.shortDesc} 
         longDesc={this.state.longDesc} org={this.state.org} designation={this.state.designation}/>
-        {this.processPortfolios(this.props.portfolio)}
       </div>
     );
   }
