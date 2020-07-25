@@ -57,6 +57,24 @@ const MOVIE_DATA =
         to: "Sep/2016",
         shortDesc: "CTS SUVA team lead",
         longDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed odio porttitor sem tincidunt scelerisque. Praesent ac tellus orci. Nullam sodales, nunc in finibus porttitor, justo leo scelerisque lectus, at volutpat purus libero sed nibh. In eleifend rhoncus feugiat. In rhoncus est a odio vestibulum auctor. Pellentesque nulla orci, placerat fringilla sodales sit amet, dignissim vel dui. Phasellus consequat ipsum id nulla fermentum dignissim vitae eu odio. Aenean nec dui euismod ipsum faucibus faucibus sit amet vel lectus. Vestibulum cursus risus eget sapien facilisis, eu aliquet diam laoreet. Proin vitae accumsan tortor, in mollis magna. Curabitur hendrerit quam vitae posuere tincidunt. Sed erat enim, blandit a viverra eu, vehicula a mi"
+      },
+      {
+        location: "Bengaluru, India",
+        designation: "SAP L1",
+        organization: "PS",
+        from: "Sep/2016",
+        to: "Sep/2018",
+        shortDesc: "CTS SUVA team lead",
+        longDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed odio porttitor sem tincidunt scelerisque. Praesent ac tellus orci. Nullam sodales, nunc in finibus porttitor, justo leo scelerisque lectus, at volutpat purus libero sed nibh. In eleifend rhoncus feugiat. In rhoncus est a odio vestibulum auctor. Pellentesque nulla orci, placerat fringilla sodales sit amet, dignissim vel dui. Phasellus consequat ipsum id nulla fermentum dignissim vitae eu odio. Aenean nec dui euismod ipsum faucibus faucibus sit amet vel lectus. Vestibulum cursus risus eget sapien facilisis, eu aliquet diam laoreet. Proin vitae accumsan tortor, in mollis magna. Curabitur hendrerit quam vitae posuere tincidunt. Sed erat enim, blandit a viverra eu, vehicula a mi"
+      },
+      {
+        location: "Bengaluru, India",
+        designation: "SAP L2",
+        organization: "PS",
+        from: "Sep/2018",
+        to: "Jul/2020",
+        shortDesc: "CTS SUVA team lead",
+        longDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed odio porttitor sem tincidunt scelerisque. Praesent ac tellus orci. Nullam sodales, nunc in finibus porttitor, justo leo scelerisque lectus, at volutpat purus libero sed nibh. In eleifend rhoncus feugiat. In rhoncus est a odio vestibulum auctor. Pellentesque nulla orci, placerat fringilla sodales sit amet, dignissim vel dui. Phasellus consequat ipsum id nulla fermentum dignissim vitae eu odio. Aenean nec dui euismod ipsum faucibus faucibus sit amet vel lectus. Vestibulum cursus risus eget sapien facilisis, eu aliquet diam laoreet. Proin vitae accumsan tortor, in mollis magna. Curabitur hendrerit quam vitae posuere tincidunt. Sed erat enim, blandit a viverra eu, vehicula a mi"
       }
     ]
   }

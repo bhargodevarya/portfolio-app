@@ -8,8 +8,8 @@ export default class ThisComp extends Component {
     return (
       <div className="thisText">
         Built with loads of love and the following
-        <Container style={{ paddingTop: "10rem" }}>
-          <Row>
+        <Container fluid="sm">
+          <Row xs={2} md={3}>
             <Col>
               <a href='http://www.nextjs.com'><img
                 style={{ width: "100px", paddingRight: "20px" }}

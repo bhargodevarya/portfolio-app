@@ -42,8 +42,8 @@ export default class portfolio extends Component {
 
   createCard(designation, org, location, shortDesc, longDesc) {
     return (
-      <Col>
-        <Card style={{ width: "18rem" }}>
+      <Col style={{paddingTop:'2rem'}}>
+        <Card style={{ width: "18rem"}}>
           <Card.Body>
             <Card.Title>
               {designation} at {org}
@@ -82,8 +82,8 @@ export default class portfolio extends Component {
   render() {
     return (
       <div>
-        <Container>
-          <Row>{this.processPortfolios(this.props.portfolio)}</Row>
+        <Container fluid="md">
+          <Row xs={1} md={3}>{this.processPortfolios(this.props.portfolio)}</Row>
         </Container>
         <PortFolioModal
           show={this.state.show}
