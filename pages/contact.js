@@ -58,33 +58,35 @@ class Contact extends Component {
         <Container id="formContainer" className="container">
           <Row>
             <Col>
-              <img src="/undraw_contact_us.svg"></img>
-            </Col>
-            <Col>
               <Form>
                 <Form.Group controlId="formBasicEmail">
-                  <Form.Label className='myNavItem'>Name</Form.Label>
+                  <Form.Label className="myNavItem">Name</Form.Label>
                   <Form.Control
                     type="email"
                     placeholder="How should I address you?"
                   />
                 </Form.Group>
                 <Form.Group controlId="formBasicSubject">
-                  <Form.Label className='myNavItem'>Subject</Form.Label>
+                  <Form.Label className="myNavItem">Subject</Form.Label>
                   <Form.Control
                     type="input"
                     placeholder="What is this about?"
                   />
                 </Form.Group>
                 <Form.Group controlId="formBasicText">
-                  <Form.Label className='myNavItem'>Thoughts</Form.Label>
-                  <Form.Control type="text" placeholder="Ok, tell me" />
+                  <Form.Label className="myNavItem">Thoughts</Form.Label>
+                  <Form.Control as='textarea' placeholder="Ok, tell me" />
                 </Form.Group>
-
                 <Button variant="primary" type="submit">
                   Submit
                 </Button>
               </Form>
+            </Col>
+            <Col>
+              <img
+                style={{ height: "30rem", width: "45rem" }}
+                src="/undraw_contact_us.svg"
+              ></img>
             </Col>
           </Row>
         </Container>
