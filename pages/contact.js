@@ -75,7 +75,7 @@ class Contact extends Component {
                 </Form.Group>
                 <Form.Group controlId="formBasicText">
                   <Form.Label className="myNavItem">Thoughts</Form.Label>
-                  <Form.Control style={{height:'150px'}} as='textarea' placeholder="Ok, tell me" />
+                  <Form.Control style={{height:'150px'}} as='textarea' placeholder="Ok, tell me. Do leave your email address" />
                 </Form.Group>
                 <Button variant="primary" type="submit">
                   Submit
