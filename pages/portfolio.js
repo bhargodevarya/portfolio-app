@@ -99,8 +99,9 @@ export default class portfolio extends Component {
 }
 
 export async function getStaticProps() {
-  //const response = await axios.get('http://jsonplaceholder.typicode.com/posts');
-  //console.log(response)
-  const portfolios = await getPortfolios();
-  return { props: portfolios };
+  //getting data from AWS API gateway
+  const response = await axios.get('https://n4rd4luy03.execute-api.us-east-1.amazonaws.com/Dev/portfolio')
+  console.log(response.data)
+  //const portfolios = await getPortfolios();
+  return { props: response.data };
 }
