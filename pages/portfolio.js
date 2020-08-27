@@ -101,7 +101,8 @@ export default class portfolio extends Component {
 export async function getStaticProps() {
   //getting data from AWS API gateway
   const response = await axios.get('https://n4rd4luy03.execute-api.us-east-1.amazonaws.com/Dev/portfolio')
-  console.log(response.data)
+  console.log(response)
   //const portfolios = await getPortfolios();
-  return { props: response.data };
+  var parsedRes = JSON.parse(response.data.body)
+  return { props:  parsedRes};
 }
