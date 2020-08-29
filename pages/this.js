@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -39,6 +40,8 @@ export default class ThisComp extends Component {
 }
 
 export async function getStaticProps() {
-  const technologies = await getTechnologies()
-  return {props: technologies}
+  const response = await axios.get('https://n4rd4luy03.execute-api.us-east-1.amazonaws.com/Dev/buildstack')
+  console.log(response)
+  var parsedRes = JSON.parse(response.data.body)
+  return {props: parsedRes}
 }
