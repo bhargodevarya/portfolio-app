@@ -9,7 +9,6 @@ export default class Blog extends Component {
      */
     static async  getInitialProps() {
         const movies = await getMovies()
-        movies.map(m => console.log("This is name", m.name))
         return { movies }
     }
 
@@ -19,7 +18,6 @@ export default class Blog extends Component {
 
     render() {
         const { movies } = this.props
-        console.log("Name is ", movies)
         return (
             <div>
                 this is the blog page

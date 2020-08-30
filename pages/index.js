@@ -1,6 +1,5 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-import { getMovies } from "../data/data";
 
 import TypedComponent from "../component/TypedComponent";
 
@@ -24,11 +23,11 @@ const Home = (props) => {
 Home.getInitialProps = async () => {
   console.log("hello from home");
   //This is normally a newtork call or something similar that usually returns a Promise.
-  const movies = await getMovies();
-  movies.map((m) => console.log("From home ", m.name));
+  //const movies = await getMovies();
+  //movies.map((m) => console.log("From home ", m.name));
   //return the props directly, what ever is returned is available on props variable in the component
   return {
-    movies,
+    //movies,
     introText: "Welcome to my site. I hope this makes you curious. Feel free to explore and you can contact me here",
     typedText: "Backend, Frontend, And everything in between"
   };

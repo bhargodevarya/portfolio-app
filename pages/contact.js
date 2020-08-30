@@ -3,17 +3,10 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { getMovies } from "../data/data";
 
 import Form from "react-bootstrap/Form";
 
 class Contact extends Component {
-  static async getInitialProps() {
-    console.log("Hello");
-    const movies = await getMovies();
-    movies.map((m) => console.log(m.name));
-    return { movies };
-  }
 
   constructor(props) {
     super(props);
