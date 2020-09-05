@@ -7,11 +7,19 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 
 class Contact extends Component {
-
   constructor(props) {
     super(props);
-    this.state = { count: 0 };
+    this.state = {
+      count: 0,
+      name: "",
+      subject: "",
+      message: "",
+    };
     this.decrement = this.decrement.bind(this);
+    this.captureFormDetails = this.captureFormDetails.bind(this);
+    this.captureName = this.captureName.bind(this);
+    this.captureSubject = this.captureSubject.bind(this);
+    this.captureMessage = this.captureMessage.bind(this);
   }
   /*
     You can initiate the state like this as well, but you wont be able to use is in any advanced use cases
@@ -44,8 +52,33 @@ class Contact extends Component {
     this.setState({ count: this.state.count - 1 });
   }
 
+  captureFormDetails(e) {
+    e.preventDefault();
+    console.log(this.state);
+    this.setState({
+      count: 0,
+      name: "",
+      subject: "",
+      message: "",
+    });
+  }
+
+  captureName(e) {
+    e.preventDefault();
+    this.setState({ ...this.state, name: e.target.value });
+  }
+
+  captureSubject(e) {
+    e.preventDefault();
+    this.setState({ ...this.state, subject: e.target.value });
+  }
+
+  captureMessage(e) {
+    e.preventDefault();
+    this.setState({ ...this.state, message: e.target.value });
+  }
+
   render() {
-    console.log(this.props);
     return (
       <div id="contactFormId">
         <Container id="formContainer" className="container">
@@ -55,22 +88,36 @@ class Contact extends Component {
                 <Form.Group controlId="formBasicEmail">
                   <Form.Label className="myNavItem">Name</Form.Label>
                   <Form.Control
-                    type="email"
-                    placeholder="How should I address you?"
+                    type="input"
+                    onChange={this.captureName}
+                    value={this.state.name}
+                    placeholder="How should I address you"
                   />
                 </Form.Group>
                 <Form.Group controlId="formBasicSubject">
                   <Form.Label className="myNavItem">Subject</Form.Label>
                   <Form.Control
                     type="input"
-                    placeholder="What is this about?"
+                    onChange={this.captureSubject}
+                    placeholder='What is this about?'
+                    value={this.state.subject}
                   />
                 </Form.Group>
                 <Form.Group controlId="formBasicText">
                   <Form.Label className="myNavItem">Thoughts</Form.Label>
-                  <Form.Control style={{height:'150px'}} as='textarea' placeholder="Ok, tell me. Do leave your email address" />
+                  <Form.Control
+                    style={{ height: "150px" }}
+                    as="textarea"
+                    onChange={this.captureMessage}
+                    placeholder="ok, tell me"
+                    value={this.state.message}
+                  />
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button
+                  variant="primary"
+                  onClick={this.captureFormDetails}
+                  type="button"
+                >
                   Submit
                 </Button>
               </Form>
