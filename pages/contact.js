@@ -61,6 +61,7 @@ class Contact extends Component {
       subject: "",
       message: "",
     });
+    alert('I will get back to you, promise. P.S. not the javascript one.')
   }
 
   captureName(e) {
