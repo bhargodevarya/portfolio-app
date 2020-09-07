@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from 'axios';
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -10,12 +11,10 @@ class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
       name: "",
       subject: "",
       message: "",
     };
-    this.decrement = this.decrement.bind(this);
     this.captureFormDetails = this.captureFormDetails.bind(this);
     this.captureName = this.captureName.bind(this);
     this.captureSubject = this.captureSubject.bind(this);
@@ -55,13 +54,17 @@ class Contact extends Component {
   captureFormDetails(e) {
     e.preventDefault();
     console.log(this.state);
-    this.setState({
-      count: 0,
-      name: "",
-      subject: "",
-      message: "",
-    });
-    alert('I will get back to you, promise. P.S. not the javascript one.')
+    axios.post('https://n4rd4luy03.execute-api.us-east-1.amazonaws.com/Dev/contact', this.state).then(res => {
+      console.log("Sent contact success", res)
+      alert('I will get back to you, promise. P.S. not the javascript one.')
+      this.setState({
+        name: "",
+        subject: "",
+        message: "",
+      });
+    }).catch(err => {
+      console.log('Error while sending contact', err)
+    })
   }
 
   captureName(e) {
