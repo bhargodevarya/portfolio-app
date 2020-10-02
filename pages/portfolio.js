@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { getPortfolios } from "../data/data";
 
 import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";

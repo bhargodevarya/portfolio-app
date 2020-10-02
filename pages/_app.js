@@ -1,7 +1,7 @@
 import App from "next/app";
 //import style file so that it is available to all components and pages
 import styles from "../styles/styles.css";
-import { getParticleConfig } from '../data/data'
+import { getParticleConfig } from '../data/particleData'
 
 //import bootstrap to enable it across the site
 //raw bootstrap works out of the box on each component
