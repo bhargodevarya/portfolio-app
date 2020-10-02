@@ -4,8 +4,6 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import { getTechnologies } from '../data/data'
-
 export default class ThisComp extends Component {
   constructor(props) {
     super(props)
